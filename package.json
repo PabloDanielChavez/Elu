@@ -4,9 +4,9 @@
   "description": "ELU CALZADOS FRONTEND",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=local next dev --webpack",
-    "build": "cross-env NODE_ENV=production next build",
-    "start": "cross-env NODE_ENV=production next start",
+    "dev": "next dev --webpack",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
