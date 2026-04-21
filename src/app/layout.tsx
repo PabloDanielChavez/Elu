@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "ELU CALZADOS",
   description: "ELU CALZADOS",
   icons: {
-    icon: ""
+    icon: "/img/ELU_logo.png"
   }
 };
 
