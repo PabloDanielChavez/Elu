@@ -1,0 +1,78 @@
+@use '../base/variables.module.scss' as v;
+@use '../base/mixins.module.scss' as m;
+
+/* --- SERVICIOS --- */
+.servicio {
+    &_section {
+        background-color: transparent;
+        background-size: cover;
+        background-position: center;
+        padding: 100px 20px;
+        display: flex;
+        justify-content: center;
+        margin-top: -8rem;
+    }
+
+    &_grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    &_item {
+        background: v.$primario;
+        padding: 50px 30px 40px 30px;
+        border-radius: 8px;
+        position: relative; // Para el icono flotante
+        text-align: center;
+        transition: transform 0.3s ease;
+        border-bottom: 4px solid transparent;
+
+        &:hover {
+        transform: translateY(-10px);
+        border-bottom: 4px solid #ffffff;
+        }
+    }
+
+    &_icono_flotante {
+        width: 70px;
+        height: 70px;
+        background-color: v.$primarioCuatro;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+    }
+
+    &_heading {
+        color: #ffffff;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    &_texto {
+        color: v.$primarioDos;
+        font-size: 14px;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    /* --- RESPONSIVO --- */
+    @media (max-width: 900px) {
+        &_grid {
+        grid-template-columns: 1fr;
+        gap: 60px; // Espacio extra por los iconos
+        }
+    }
+}

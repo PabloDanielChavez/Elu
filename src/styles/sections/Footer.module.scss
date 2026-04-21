@@ -1,0 +1,134 @@
+@use '../base/variables.module.scss' as v;
+@use '../base/mixins.module.scss' as m;
+
+/* --- FOOTER ORGÁNICO --- */
+.footer {
+    position: relative;
+    background-color: transparent;
+    padding-bottom: 40px;
+    margin-top: 100px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    &_divider {
+        position: absolute;
+        top: -95px; // Ajustado según el tamaño de la imagen de mancha
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-color: v.$primarioTres;
+        
+        /* Efecto irregular con máscara */
+        mask-image: url('https://raw.githubusercontent.com/Aris-T2/Resources/main/brush-stroke.png');
+        -webkit-mask-image: url('https://raw.githubusercontent.com/Aris-T2/Resources/main/brush-stroke.png');
+        mask-size: cover;
+        -webkit-mask-size: cover;
+    }
+
+    &_layout {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: v.$primarioCinco;
+
+        @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        }
+    }
+
+    &_menu_icon {
+        span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: v.$primarioCinco;
+        margin: 5px 0;
+        }
+    }
+
+    &_brands {
+        display: flex;
+        gap: 30px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        opacity: 0.8;
+
+        @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 10px;
+        }
+    }
+
+    &_h2 {
+        color: v.$primarioSeis;
+        margin: 0;
+        font-size: 2.2rem;
+        line-height: 0.5;
+        font-weight: 900;
+    }
+
+    &_span {
+        color: v.$primarioCinco;
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+
+    &_social {
+        display: flex;
+        gap: 20px;
+        font-size: 1.5rem;
+
+        i {
+        transition: color 0.3s ease;
+        
+        &:hover {
+            color: v.$primarioCuatro;
+            cursor: pointer;
+        }
+        }
+    }
+
+    /* Estilos para el bloque de créditos/portafolio */
+    &_box {
+        &.footer_brands {
+        padding: 20px 0;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            font-size: 0.85rem;
+            color: v.$primarioDos;
+            letter-spacing: 0.5px;
+            margin: 0;
+
+            @media (max-width: 768px) {
+            font-size: 0.75rem;
+            line-height: 1.6;
+            padding: 0 15px;
+            }
+        }
+
+        a {
+            color: v.$primarioCinco;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 5px;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+            color: v.$primarioCuatro;
+            border-bottom: 1px solid var(--primarioCuatro);
+            }
+        }
+        }
+    }
+}

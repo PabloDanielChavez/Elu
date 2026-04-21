@@ -1,0 +1,192 @@
+@use '../base/variables.module.scss' as v;
+@use '../base/mixins.module.scss' as m;
+
+/* --- BIENVENIDA --- */
+.bienvenida {
+  background-image: linear-gradient( to bottom, rgba( v.$primario, 0.4), rgba( v.$primario, 0.0)), url("https://i.pinimg.com/1200x/b1/78/0f/b1780fdf6063b0b371e9fe97c049f609.jpg");
+  @include m.tablet {
+    background-image: linear-gradient( to right, rgba( v.$primario, 0.4), rgba( v.$primario, 0.0)), url("https://i.pinimg.com/1200x/b1/78/0f/b1780fdf6063b0b371e9fe97c049f609.jpg");
+  }
+
+  background-position: cover;
+  background-repeat: none;
+  background-size: cover;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 20px 120px 20px;
+  position: relative;
+  overflow: hidden;
+
+  &_layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &_header {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; // Texto más ancho que la imagen
+    align-items: center;
+    gap: 6rem;
+
+    &_box_informacion {
+      background-color: rgba( v.$primario, 0.05);
+      padding: 3rem 1rem 3rem 2rem;
+      border-radius: 20px;
+    }
+
+    &_h1_titulo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: clamp(3rem, 8vw, 5rem);
+      font-weight: 800;
+      line-height: 1;
+      margin: 0 0 15px 0;
+      text-transform: uppercase;
+      color: v.$primarioCuatro;
+    }
+
+    &_span_tag {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: v.$primarioCinco;
+    }
+
+    &_p_descripcion {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      max-width: 500px;
+      color: v.$primario;
+    }
+
+    &_box_btn {
+      display: flex;
+      gap: 15px;
+    }
+
+    &_btn {
+      padding: 12px 28px;
+      border: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+
+      &:first-child {
+        background-color: v.$primarioCuatro;
+        color: v.$primarioDos;
+        border: 2px solid v.$primarioCuatro;
+        &:hover {
+          background-color: transparent;
+          color: v.$primario;
+          border-color: v.$primarioCuatro;
+        }
+      }
+
+      &:last-child {
+        background-color: rgba(v.$primario, 0.3);
+        color: v.$primarioDos;
+        border: 2px solid rgba(v.$primarioTres, 0.3);
+        &:hover {
+          background-color: v.$primarioCuatro;
+          color: v.$primarioDos;
+          border-color: v.$primarioCuatro;
+        }
+      }
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &_box_imagen {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &_imagen {
+      width: 120%;
+      height: auto;
+      transform: rotate(-15deg);
+      filter: drop-shadow(20px 20px 30px rgba(0, 0, 0, 0.4));
+    }
+  }
+
+
+  /* Elementos internos que no siguen exactamente la nomenclatura de clase padre */
+  .circulo {
+    &_fondo {
+      filter: contrast(100%);
+      background: linear-gradient( to right, rgba( v.$primario, 0.9), rgba( v.$primario, 0.7)), url("https://i.pinimg.com/736x/28/97/23/289723dac34ea218b9929110347db32c.jpg");
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &_footer {
+    margin-top: 50px;
+
+    &_layout {
+      display: flex;
+      gap: 15px;
+    }
+
+    &_box {
+      background-color: v.$primarioTres;
+      padding: 8px 20px;
+      border-radius: 50px;
+      backdrop-filter: blur(5px);
+    }
+
+    &_span {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  /* --- RESPONSIVO --- */
+  @media (max-width: 992px) {
+    &_header {
+      grid-template-columns: 1fr;
+      text-align: center;
+
+      &_box_informacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &_box_btn {
+        justify-content: center;
+      }
+    }
+
+    .circulo_fondo {
+      width: 300px;
+      height: 300px;
+      margin-top: 30px;
+    }
+
+    // Nota: Esta clase no pertenece a .bienvenida según el CSS original, 
+    // pero la mantenemos aquí por organización de la sección.
+    .header_nav {
+      display: none !important;
+    }
+  }
+}

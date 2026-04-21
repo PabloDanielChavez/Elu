@@ -1,0 +1,133 @@
+@use '../base/variables.module.scss' as v;
+@use '../base/mixins.module.scss' as m;
+
+.catalogo {
+    background-color: transparent;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+
+    &_grid {
+        display: flex;
+        flex-direction: column;
+        gap: 60px 30px; // Más espacio arriba por la imagen que sobresale
+        max-width: 1100px;
+        width: 100%;
+        gap: 10rem 3rem;
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @include m.tabletXL {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    /* La Tarjeta */
+    &_card {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(15px);
+        border-radius: 25px;
+        padding: 20px;
+        padding-top: 0; // Para que la imagen controle el espacio
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+        width: 90%;
+        margin: 0 auto;
+
+        &:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.12);
+
+        // Efecto en la imagen cuando se hace hover en la tarjeta
+        .catalogo_img {
+            transform: scale(1.1) rotate(-5deg);
+        }
+        }
+    }
+
+    /* Contenedor de la imagen que sobresale */
+    &_imagen_container {
+        position: relative;
+        margin-top: -60px;
+        margin-bottom: 20px;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.5));
+        transition: transform 0.3s ease;
+    }
+
+    &_rating {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: white;
+        color: #333;
+        padding: 2px 8px;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &_titulo {
+        color: #fff;
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    &_desc {
+        color: v.$primarioDos;
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+        height: 40px; // Mantiene alineadas las tarjetas
+    }
+
+    &_footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    &_precio {
+        color: v.$primarioDos;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    &_btn_add {
+        background-color: v.$primario;
+        color: v.$primarioSeis;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background 0.3s, transform 0.3s; // Agregada transición de transform
+
+        &:hover {
+            background-color: v.$primarioSeis;
+            color: v.$primario;
+            transform: scale(1.06);
+        }
+    }
+}
