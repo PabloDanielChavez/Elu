@@ -24,8 +24,8 @@ export default function Header() {
 
                 <div className={style_header.header_box}>
                     <span className={style_header.header_span}>
-                        <a className={style_header.header_p_telefono} href="tel:+542202434769">
-                        <BsTelephoneFill className={style_header.icono_clase} />
+                        <a className={style_header.header_p_telefono} href="tel:+542202434769" aria-label="Llamar al teléfono de atención al cliente">
+                            <BsTelephoneFill className={style_header.icono_clase} />
                         </a>
                     </span>
                 </div>

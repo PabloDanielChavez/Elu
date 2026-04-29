@@ -1,6 +1,7 @@
 "use client";
 
 import style_nosotros from "@/styles/sections/Nosotros.module.scss";
+import Image from "next/image";
 
 export default function Nosotros() {
     return (
@@ -20,7 +21,13 @@ export default function Nosotros() {
                 </div>
                 <div className={style_nosotros.nosotros_imagen_box}>
                     <div className={style_nosotros.nosotros_circulo_decorativo}></div>
-                    <img src="../img/zapatero trabajando.jpg" alt="Artesanía en calzado" className={style_nosotros.nosotros_imagen} />
+                    <Image 
+                        className={style_nosotros.nosotros_imagen}
+                        src={"/img/zapatero trabajando.jpg"}
+                        alt={"Artesanía en calzado"}
+                        width={400}
+                        height={400}
+                    />
                 </div>
             </div>
         </section>

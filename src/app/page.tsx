@@ -1,22 +1,25 @@
-// export const dynamic = 'force-dynamic';
+import dynamic from 'next/dynamic';
+import { lazyComponent } from '@/lib/dynamic-loader';
 
 import Bienvenida from "@/components/Bienvenida";
 import Header from "@/components/Header";
 import Servicio from "@/components/Servicio";
-import Catalogo from "@/components/Catalogo";
-import Nosotros from "@/components/Nosotros";
+const Catalogo = lazyComponent(() => import("@/components/Catalogo"));
+const Nosotros = lazyComponent(() => import("@/components/Nosotros"));
 import Footer from "@/components/Footer";
 
 export default async function Home() {
 
   return (
     <>
-      <Header /*experiencia={data.Experiencia} *//>
-      <Bienvenida /*perfil={data.Perfil}*/ />
-      <Servicio /*habilidades={data.Habilidades} *//>
-      <Catalogo /*servicios={data.Servicios} *//>
-      <Nosotros /*servicios={data.Servicios} *//>
-      <Footer /*servicios={data.Servicios} *//>
+      <Header />
+      <main>
+        <Bienvenida />
+        <Servicio />
+        <Catalogo />
+        <Nosotros />
+      </main>
+      <Footer />
     </>
   );
 }
