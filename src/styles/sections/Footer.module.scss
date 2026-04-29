@@ -68,8 +68,9 @@
         color: v.$primarioSeis;
         margin: 0;
         font-size: 2.2rem;
-        line-height: 0.5;
         font-weight: 900;
+        display: flex;
+        flex-direction: column;
     }
 
     &_span {

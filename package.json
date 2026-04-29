@@ -4,7 +4,7 @@
   "description": "ELU CALZADOS FRONTEND",
   "private": true,
   "scripts": {
-    "dev": "next dev --webpack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -20,6 +20,7 @@
     "react-dom": "^19.2.3",
     "react-icons": "^5.5.0",
     "sass": "^1.97.3",
+    "sharp": "^0.34.5",
     "swr": "^2.4.1"
   },
   "devDependencies": {
@@ -28,6 +29,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vite-plugin-imagemin": "^0.6.1"
   }
 }

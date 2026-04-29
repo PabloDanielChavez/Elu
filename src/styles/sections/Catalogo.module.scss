@@ -39,13 +39,14 @@
         margin: 0 auto;
 
         &:hover {
-        transform: translateY(-5px);
-        background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.12);
+            cursor: pointer;
 
         // Efecto en la imagen cuando se hace hover en la tarjeta
-        .catalogo_img {
-            transform: scale(1.1) rotate(-5deg);
-        }
+            .catalogo_img {
+                transform: scale(1.1) rotate(-5deg);
+            }
         }
     }
 

@@ -10,7 +10,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "ELU CALZADOS",
+  title: "ELU",
   description: "ELU CALZADOS",
   icons: {
     icon: "/img/ELU_logo.png"

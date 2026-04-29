@@ -15,7 +15,7 @@ export default function Nosotros() {
                         No solo fabricamos calzado; construimos la base de tu confianza. Nuestra especialización en producción a fazón nos permite ser el aliado estratégico de marcas que buscan durabilidad, diseño y una terminación impecable.
                     </p>
                     <button className={style_nosotros.nosotros_btn}>
-                        Nuestra Historia <span>→</span>
+                        Nuestra Historia
                     </button> 
                 </div>
                 <div className={style_nosotros.nosotros_imagen_box}>

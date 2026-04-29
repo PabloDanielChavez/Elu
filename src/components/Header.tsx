@@ -1,6 +1,7 @@
 "use client";
 
 import style_header from "@/styles/sections/Header.module.scss";
+import Image from "next/image";
 import { IconBase } from "react-icons";
 import { BiMenu } from "react-icons/bi";
 import { BsTelephoneFill } from "react-icons/bs";
@@ -11,9 +12,14 @@ export default function Header() {
         <header className={style_header.header}>
             <div className={style_header.header_layout}>
                 <div className={style_header.header_box}>
-                    <span className={style_header.header_span}>
-                        <h2 className={style_header.header_h2}>ELU</h2>
-                    </span>
+                    <Image 
+                        // className={style_header.header_box} 
+                        src="/img/ELU_logo.png" 
+                        alt="LOGOTIPO"
+                        width={50}
+                        height={50}
+                        priority
+                    />
                 </div>
 
                 <div className={style_header.header_box}>

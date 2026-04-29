@@ -1,3 +1,14 @@
-export default function ProductoPage() {
-  return <div>Página de Producto</div>;
+import Header from "@/components/Header";
+import Producto from "@/components/Producto";
+import Footer from "@/components/Footer";
+
+export default async function PaginaProducto() {
+
+  return (
+    <>
+      <Header />
+      <Producto />
+      <Footer />
+    </>
+  );
 }

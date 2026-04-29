@@ -1,0 +1,201 @@
+@use '../base/variables.module.scss' as v;
+@use '../base/mixins.module.scss' as m;
+
+// ProductoDetalle.module.scss
+
+// Variables aplicadas
+.producto {
+    padding: 100px 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+
+    .producto_layout {
+        max-width: 1100px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+}
+
+/* --- SECCIÓN SUPERIOR --- */
+.hero_section {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+
+    @media (max-width: 850px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.galeria_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+
+    .imagen_principal {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        filter: drop-shadow(0 15px 30px rgba(0,0,0,0.15));
+    }
+}
+
+.info_principal {
+    .sku {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        color: v.$primarioTres;
+        margin-bottom: 10px;
+    }
+
+    .titulo {
+        font-size: 2.8rem;
+        font-weight: 300;
+        color: v.$primario;
+        margin-bottom: 15px;
+    }
+
+    .precio {
+        font-size: 2.2rem;
+        color: v.$primarioMarron; // Color cuero artesanal
+        font-weight: 500;
+        margin-bottom: 35px;
+    }
+}
+
+/* --- FICHA TÉCNICA RÁPIDA --- */
+.detalles_rapidos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid v.$primarioDos;
+    border-bottom: 1px solid v.$primarioDos;
+    padding: 25px 0;
+    margin-bottom: 40px;
+    gap: 20px;
+
+    .dato {
+        strong {
+            display: block;
+            font-size: 0.7rem;
+            color: v.$primarioCuatro; // Un toque de color técnico
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+        }
+
+        span {
+            font-size: 1.1rem;
+            color: v.$primario;
+            font-weight: 400;
+        }
+    }
+}
+
+/* --- ACCIONES --- */
+.acciones {
+    display: flex;
+    gap: 15px;
+    height: 55px;
+
+    .selector_cantidad {
+        display: flex;
+        align-items: center;
+        border: 1.5px solid v.$primarioDos;
+        border-radius: 2px;
+
+        button {
+            background: none;
+            border: none;
+            width: 45px;
+            cursor: pointer;
+            color: v.$primario;
+            font-size: 1.2rem;
+            transition: color 0.2s;
+            &:hover { color: v.$primarioMarron; }
+        }
+
+        span {
+            padding: 0 10px;
+            font-weight: 600;
+            color: v.$primario;
+        }
+    }
+
+    .btn_comprar {
+        flex: 1;
+        background-color: v.$primario;
+        color: #fff;
+        border: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: v.$primarioMarron;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+.separador {
+    border: 0;
+    border-top: 1px solid v.$primarioCinco;
+}
+
+/* --- SECCIÓN DETALLES TÉCNICOS --- */
+.detalles_tecnicos {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 100px;
+
+    @media (max-width: 850px) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        color: v.$primario;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .columna_descripcion {
+        p {
+            line-height: 1.9;
+            color: v.$primarioTres;
+            font-size: 1.05rem;
+        }
+    }
+
+    .lista_specs {
+        list-style: none;
+        padding: 0;
+
+        li {
+            padding: 12px 0;
+            border-bottom: 1px solid v.$primarioDos;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+
+            strong {
+                color: v.$primarioCuatro;
+                font-weight: 400;
+            }
+
+            span {
+                color: v.$primario;
+                font-weight: 500;
+            }
+        }
+    }
+}

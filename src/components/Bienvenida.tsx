@@ -1,6 +1,7 @@
 "use client";
 
 import style_bienvenida from "@/styles/sections/Bienvenida.module.scss";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Bienvenida() {
@@ -13,27 +14,28 @@ export default function Bienvenida() {
                             <span className={style_bienvenida.bienvenida_header_span_tag}>creaciones</span>
                             ELU
                         </h1>
-                        <span className={style_bienvenida.bienvenida_header_span_tag} >
-                            Nuestra Zapatería - ELU Creaciones
-                        </span>
                         <p className={style_bienvenida.bienvenida_header_p_descripcion} >
                             Brindamos soluciones a medida para marcas que exigen distinción y durabilidad en cada par. Nuestra experiencia garantiza un producto final de alta gama.
                         </p>
                         <div className={style_bienvenida.bienvenida_header_box_btn}>
-                            <Link href="https://wa.me/5491158007420">
-                                <button className={style_bienvenida.bienvenida_header_btn}>
-                                    <span className={style_bienvenida.bienvenida_header_btn_span}>ENVIAR MENSAJE</span>
-                                </button>
+                            <Link className={style_bienvenida.bienvenida_header_btn} href="https://wa.me/5491158007420?text=Hola%2C%20vi%20su%20web%20(https%3A%2F%2Felucalzados.netlify.app)%20y%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20modelos%20disponibles.%20%C2%BFPodr%C3%ADan%20asesorarme%3F">
+                                <span className={style_bienvenida.bienvenida_header_btn_span}>MENSAJE</span>
                             </Link>
-                            <Link href="tel:+5491158007420">
-                                <button className={style_bienvenida.bienvenida_header_btn}>
-                                    <span className={style_bienvenida.bienvenida_header_btn_span}>LLAMAR</span>
-                                </button>
+                            <Link className={style_bienvenida.bienvenida_header_btn} href="tel:+5491158007420">
+                                <span className={style_bienvenida.bienvenida_header_btn_span}>LLAMAR</span>
                             </Link>
                         </div>
                     </div>
                     <div className={style_bienvenida.bienvenida_header_box_imagen}>
-                        <div className={style_bienvenida.circulo_fondo}> <img className={style_bienvenida.bienvenida_header_imagen} src="../img/1.png" alt="ZAPATO" />
+                        <div className={style_bienvenida.circulo_fondo}>
+                            <Image 
+                                className={style_bienvenida.bienvenida_header_imagen}
+                                src="/img/1.png" 
+                                alt="ZAPATO"
+                                width={600}
+                                height={600}
+                                priority
+                            />
                         </div>
                     </div>
                 </article>

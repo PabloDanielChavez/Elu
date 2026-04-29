@@ -31,8 +31,8 @@
         border-bottom: 4px solid transparent;
 
         &:hover {
-        transform: translateY(-10px);
-        border-bottom: 4px solid #ffffff;
+            transform: translateY(-10px);
+            cursor: pointer;
         }
     }
 
