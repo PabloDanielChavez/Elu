@@ -1,4 +1,3 @@
-import dynamic from 'next/dynamic';
 import { lazyComponent } from '@/lib/dynamic-loader';
 
 import Bienvenida from "@/components/Bienvenida";

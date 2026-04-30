@@ -2,10 +2,7 @@
 
 import style_header from "@/styles/sections/Header.module.scss";
 import Image from "next/image";
-import { IconBase } from "react-icons";
-import { BiMenu } from "react-icons/bi";
 import { BsTelephoneFill } from "react-icons/bs";
-import { GiConverseShoe } from "react-icons/gi";
 
 export default function Header() {
     return (

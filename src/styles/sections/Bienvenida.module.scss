@@ -1,12 +1,13 @@
 @use '../base/variables.module.scss' as v;
 @use '../base/mixins.module.scss' as m;
 
-/* --- BIENVENIDA --- */
 .bienvenida {
-  background-image: linear-gradient( to bottom, rgba( v.$primario, 0.4), rgba( v.$primario, 0.0)), url("https://i.pinimg.com/1200x/b1/78/0f/b1780fdf6063b0b371e9fe97c049f609.jpg");
+  background-image: linear-gradient(to bottom, rgba(v.$primario, 0.4), rgba(v.$primario, 0.0)), url("/img/fondo_bienvenida.jpg");
+
   @include m.tablet {
-    background-image: linear-gradient( to right, rgba( v.$primario, 0.4), rgba( v.$primario, 0.0)), url("https://i.pinimg.com/1200x/b1/78/0f/b1780fdf6063b0b371e9fe97c049f609.jpg");
+    background-image: linear-gradient(to right, rgba(v.$primario, 0.4), rgba(v.$primario, 0.0)), url("/img/fondo_bienvenida.jpg");
   }
+
   background-repeat: none;
   background-size: cover;
   min-height: 100dvh;
@@ -16,10 +17,11 @@
   position: relative;
   overflow: hidden;
 
-  @include m.tablet{
+  @include m.tablet {
     min-height: 100vh;
     align-items: center;
   }
+
   &_layout {
     max-width: 1200px;
     margin: 0 auto;
@@ -31,12 +33,13 @@
     grid-template-columns: 1.2fr 0.8fr; // Texto más ancho que la imagen
     align-items: center;
     gap: 1.4rem;
+
     @include m.tablet {
       gap: 6rem;
     }
 
     &_box_informacion {
-      background-color: rgba( v.$primario, 0.05);
+      background-color: rgba(v.$primario, 0.05);
       padding: 3rem 1rem 3rem 2rem;
       border-radius: 20px;
     }
@@ -45,9 +48,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
       @include m.tablet {
         align-items: flex-start;
       }
+
       font-size: clamp(3rem, 8vw, 5rem);
       font-weight: 800;
       line-height: 1;
@@ -75,9 +80,11 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+
       @include m.tablet {
         flex-direction: row;
       }
+
       gap: 15px;
     }
 
@@ -89,11 +96,13 @@
       cursor: pointer;
       transition: all 0.3s ease;
       text-transform: uppercase;
+      text-decoration: none;
 
       &:first-child {
         background-color: v.$primarioCuatro;
         color: v.$primarioDos;
         border: 2px solid v.$primarioCuatro;
+
         &:hover {
           background-color: transparent;
           color: v.$primario;
@@ -105,6 +114,7 @@
         background-color: rgba(v.$primario, 0.3);
         color: v.$primarioDos;
         border: 2px solid rgba(v.$primarioTres, 0.3);
+
         &:hover {
           background-color: v.$primarioCuatro;
           color: v.$primarioDos;
@@ -138,7 +148,7 @@
   .circulo {
     &_fondo {
       filter: contrast(100%);
-      background: linear-gradient( to right, rgba( v.$primario, 0.9), rgba( v.$primario, 0.7)), url("https://i.pinimg.com/736x/28/97/23/289723dac34ea218b9929110347db32c.jpg");
+      background: linear-gradient(to right, rgba(v.$primario, 0.9), rgba(v.$primario, 0.7)), url("/elu-frontend/public/img/fondo_circulo.jpg");
       width: 450px;
       height: 450px;
       border-radius: 50%;

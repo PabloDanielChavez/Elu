@@ -6,8 +6,6 @@ export default function Producto() {
     return (
         <main className={style_producto.producto}>
             <div className={style_producto.producto_layout}>
-                
-                {/* SECCIÓN SUPERIOR: Galería e Información Principal */}
                 <section className={style_producto.hero_section}>
                     <div className={style_producto.galeria_box}>
                         <img 
@@ -16,7 +14,6 @@ export default function Producto() {
                             className={style_producto.imagen_principal} 
                         />
                     </div>
-
                     <div className={style_producto.info_principal}>
                         <p className={style_producto.sku}>SKU: N1430 — EN STOCK</p>
                         <h1 className={style_producto.titulo}>Zapatilla Borceguí Premium</h1>
@@ -32,7 +29,6 @@ export default function Producto() {
                                 <span>Cuero Legítimo</span>
                             </div>
                         </div>
-
                         <div className={style_producto.acciones}>
                             <div className={style_producto.selector_cantidad}>
                                 <button>-</button>
@@ -45,10 +41,7 @@ export default function Producto() {
                         </div>
                     </div>
                 </section>
-
                 <hr className={style_producto.separador} />
-
-                {/* SECCIÓN MEDIA: Información Técnica */}
                 <section className={style_producto.detalles_tecnicos}>
                     <div className={style_producto.columna_descripcion}>
                         <h3>Información del Taller</h3>
@@ -66,7 +59,6 @@ export default function Producto() {
                         </ul>
                     </div>
                 </section>
-
             </div>
         </main>
     );

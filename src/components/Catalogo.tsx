@@ -26,7 +26,7 @@ export default function Catalogo() {
                                 alt={prod.nombre}
                                 width={200}
                                 height={200}
-                                priority
+                                sizes="200px" // <--- Al ser fija en el grid, le decimos al navegador que solo baje 200px
                             />
                             <span className={style_catalogo.catalogo_rating}>{prod.talle}</span>
                         </div>
@@ -39,6 +39,7 @@ export default function Catalogo() {
                                     href={`https://wa.me/5491158007420?text=https%3A%2F%2Felucalzados.netlify.app%0AHola!%20Me%20gustaría%20más%20información%20sobre:%0AProducto:%20${prod.nombre}%0APrecio:%20$${prod.precio}%0ADescripción:%20${prod.desc}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label={`Consultar por WhatsApp sobre el modelo ${prod.nombre}`}
                                     className={style_catalogo.catalogo_btn_add}
                                 ><IoLogoWhatsapp /></Link>
                             </div>
